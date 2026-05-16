@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+ENV/
+
+# Web Server - Uploads
+# We want to keep the directory structure but not the uploaded files
+web_server/static/uploads/*
+!web_server/static/uploads/.gitkeep
+
+# Logs
+*.log
+web_server/server.log
+
+# Third-party Libraries (Large source code)
+# These should be installed or cloned by the user manually
+e-Paper/
+bcm2835-*/
+WiringPi/
+lg-master/
+
+# Archive files
+*.zip
+*.tar.gz
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Project specific temporary files
+.lgd-nfy0
