@@ -1,5 +1,5 @@
 import os
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageOps
 
 # 7.3inch e-Paper (E) Palette
 # 0:Black, 1:White, 2:Yellow, 3:Red, 4:Black(Orange?), 5:Blue, 6:Green
@@ -23,6 +23,13 @@ def get_palette_image():
 def process_image(input_path, output_path):
     # Open image
     img = Image.open(input_path)
+    
+    # 修正手機拍攝的 EXIF 轉向資訊
+    img = ImageOps.exif_transpose(img)
+    
+    # 自動判斷長寬：如果是直向 (H > W)，旋轉 90 度以符合電子紙橫向顯示 (800x480)
+    if img.height > img.width:
+        img = img.rotate(90, expand=True)
     
     # 針對超大圖片進行初步縮放以節省記憶體
     if img.width > 2000 or img.height > 2000:
