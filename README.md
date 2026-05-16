@@ -1,6 +1,7 @@
 # Waveshare 7.3inch e-Paper (E) Web Server
 
 這是一個專為 **Raspberry Pi Zero** 開發的專案。透過 Flask 建立網頁伺服器，讓使用者能夠透過手機或電腦的瀏覽器上傳任意全彩圖片，並利用 **Floyd-Steinberg 抖動演算法 (Dithering)** 完美轉換並推送到支援 7 色顯示的 Waveshare 7.3 吋電子紙 (e-Paper) 上。
+<img width="849" height="573" alt="image" src="https://github.com/user-attachments/assets/87d36341-7684-45fc-83cf-95c3097f6dbe" />
 
 ## 🌟 功能說明
 
